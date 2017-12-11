@@ -30,9 +30,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.d(TAG, "onCreate aufgerufen");
         if(savedInstanceState !=null){
             meinText = savedInstanceState.getString("meinText");
+
         }
+
 
         wochentagAuswahl = (Spinner) findViewById(R.id.wochentage);
         wochentagAuswahl.setOnItemSelectedListener(this);
