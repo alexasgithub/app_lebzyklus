@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -31,8 +32,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         Log.d(TAG, "onCreate aufgerufen");
+        Toast.makeText(this, "In onCreate", Toast.LENGTH_SHORT).show();
+        Log.i("info", "In onCreate");
         if(savedInstanceState !=null){
             meinText = savedInstanceState.getString("meinText");
+            Toast.makeText(this, "meinText: "+meinText, Toast.LENGTH_SHORT).show();
+            Log.i("info", "meinText"+meinText);
 
         }
 
@@ -44,26 +49,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
 
- /*       button = (Button) findViewById(R.id.button);
-
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText nameText = (EditText) findViewById(R.id.eingabe);
-                //  nameText.setText(nameText);
-                Log.d(TAG, "meinText=" + nameText.getText().toString()+" ");
-
-            }
-        });*/
-
     }
 
     public void onSpeichernClick(View v){
         nameText = (EditText) findViewById(R.id.eingabe);
         meinText = nameText.getText().toString()+" ";
-
-
 
     }
 
@@ -76,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onStart();
         Log.d(TAG,"onStart() aufgerufen");
         Log.d(TAG, "meinText = "+meinText);
+        Toast.makeText(this, "in onStart", Toast.LENGTH_SHORT).show();
+        Log.i("info", "in onStart");
+        Toast.makeText(this, "meinText: "+meinText, Toast.LENGTH_SHORT).show();
+        Log.i("info", "meinText"+meinText);
 
     }
 
@@ -86,6 +80,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Log.d(TAG,"onStop() aufgerufen");
         super.onStop();
         Log.d(TAG, "meinText = "+meinText);
+        Toast.makeText(this, "in onStop ", Toast.LENGTH_SHORT).show();
+        Log.i("info", "in onStop");
+        Toast.makeText(this, "meinText: "+meinText, Toast.LENGTH_SHORT).show();
+        Log.i("info", "meinText"+meinText);
 
     }
 
@@ -93,6 +91,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG,"onDestroy() aufgerufen");
+        Toast.makeText(this, "in onDestroy", Toast.LENGTH_SHORT).show();
+        Log.i("info", "onDestroy");
+        Toast.makeText(this, "meinText: "+meinText, Toast.LENGTH_SHORT).show();
+        Log.i("info", "meinText"+meinText);
     }
 
     @Override
@@ -100,6 +102,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onPause();
         Log.d(TAG,"onPause() aufgerufen");
         Log.d(TAG, "meinText = "+meinText);
+        Toast.makeText(this, "onPause ", Toast.LENGTH_SHORT).show();
+        Log.i("info", "onPause");
+        Toast.makeText(this, "meinText: "+meinText, Toast.LENGTH_SHORT).show();
+        Log.i("info", "meinText"+meinText);
     }
 
     @Override
@@ -107,12 +113,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onResume();
         Log.d(TAG,"onResume() aufgerufen");
         Log.d(TAG, "meinText = "+meinText);
+        Toast.makeText(this, "onResume ", Toast.LENGTH_SHORT).show();
+        Log.i("info", "onResume");
+        Toast.makeText(this, "meinText: "+meinText, Toast.LENGTH_SHORT).show();
+        Log.i("info", "meinText"+meinText);
     }
     @Override
     protected void onRestart() {
         super.onRestart();
         Log.d(TAG,"onRestart() aufgerufen");
         Log.d(TAG, "meinText = "+meinText);
+        Toast.makeText(this, "onRestart ", Toast.LENGTH_SHORT).show();
+        Log.i("info", "onRestart");
+        Toast.makeText(this, "meinText: "+meinText, Toast.LENGTH_SHORT).show();
+        Log.i("info", "meinText"+meinText);
     }
 
     @Override

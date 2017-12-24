@@ -11,7 +11,9 @@
         android:id="@+id/eingabe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:background="@android:drawable/editbox_background_normal"
+        android:layout_marginBottom="20sp"
         android:text="Hello World!"
         android:textSize="24sp" />
 
@@ -19,6 +21,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50sp"
+        android:layout_gravity="center_horizontal"
         android:text="Speichern"
         android:onClick="onSpeichernClick"/>
 
@@ -26,6 +30,8 @@
         android:id="@+id/wochentage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="30sp"
         android:entries="@array/wochentage"
         />
 
@@ -33,6 +39,9 @@
         android:id="@+id/ausgabeSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="testSpinner" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="30sp"
+        android:layout_marginLeft="30sp"
+        android:text="Ausgabe der Wochentage" />
 
 </LinearLayout>
